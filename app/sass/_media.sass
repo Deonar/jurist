@@ -1,0 +1,103 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+
+//Extra large: ≥1200px
++media-breakpoint-down(xl)
+
+//Large: ≥992px
++media-breakpoint-down(lg)
+  //Img-list-block
+  .img-list
+    overflow: hidden
+//Medium: ≥768px
++media-breakpoint-down(md)
+  .top-nav
+    .logo_black
+      display: none
+    .logo_white
+      display: block
+    .top-nav_menu
+      position: absolute
+      display: none
+      background: #fff
+      padding: 0
+      margin-top: 45px
+      width: 310px
+      right: 0
+      text-align: center
+      li
+        margin: 0
+        width: 100%
+        a
+          display: block
+          padding: 15px
+          color: black
+          font-size: 18px
+          font-family: $title-font
+          &:hover
+            background: $accent
+            color: #fff
+            &::after
+              content: ''
+              display: none
+    .phone
+      padding-top: 55px
+      font-size: 18px
+    .btn-menu
+      display: block
+  //Main
+  .main
+    background: url(../img/main_bg.jpg) no-repeat center top
+    background-size: cover
+    .main-container
+      background: url(../img/XXI.png) no-repeat right 0px bottom 50px
+      background-size: 40%
+    .slogan
+      color: #fff
+    .slogan_h1
+      margin-top: 210px
+      font-family: $title-font
+      letter-spacing: .04px
+      font-size: 16px
+      font-weight: normal
+      text-transform: uppercase
+      line-height: 23px
+    .slogan_h2
+      font-family: $title-font
+      color: #fff
+      letter-spacing: 1.88px
+      font-size: 42px
+      margin-top: 28px
+      margin-bottom: 50px
+      font-weight: normal
+      text-transform: uppercase
+      line-height: 55px
+  //Img-list-block
+  .img-list
+    margin-top: 0
+//Small: ≥576px
++media-breakpoint-down(sm)
+
+//Extra small: >0
++media-breakpoint-down(xs)
+
+
+/*==========  Mobile First  ==========*/
+
+//Extra small: <576px
++media-breakpoint-up(xs)
+
+//Small: ≤576px
++media-breakpoint-up(sm)
+
+//Medium: ≤768px
++media-breakpoint-up(md)
+
+//Large: ≤992px
++media-breakpoint-up(lg)
+
+//Extra large: ≤1200px
++media-breakpoint-up(xl)
