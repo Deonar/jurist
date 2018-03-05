@@ -13,29 +13,36 @@ html, body
 	height: 100%
 
 body
-	background: #7d7b7b
 	font-size: 16px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
-	input, textarea
-			border: #666 1px solid
-			outline: none
-			&:focus:required:invalid
-				border-color: red
-			&:required:valid
-				border-color: green
 
 .img-responsive
 	display: block
 	max-width: 100%
 	height: auto
-
+.clearfix::after
+	content: ""
+	clear: both
+	display: table
 .text-center
 	text-align: center
-
+.title
+	font-family: $title-font
+	letter-spacing: 1.68px
+	line-height: 1.4
+	font-size: 39px
+	font-weight: 400
+	text-align: center
+.sub-title
+	font-family: $title-font
+	font-weight: 400
+	font-size: 25px
+	letter-spacing: 1.12px
+	text-align: center
 
 //Header
 .header
@@ -123,7 +130,7 @@ body
 	a
 		border: 3px solid #bed6e5
 		color: #fff
-		border-radius: 5px
+		border-radius: 3px
 		background: $accent
 		display: inline-block
 		height: 44px
@@ -136,6 +143,7 @@ body
 		i
 			font-size: 18px
 			line-height: 40px
+
 //Img-list-block
 .img-list
 	max-width: 1230px
@@ -172,6 +180,233 @@ body
 			left: 50%
 			transform: translate(-50%,-50%)
 
+//Form-contact
+.form-contact
+	background: url(../img/form.jpeg) no-repeat center top
+	background-size: cover
+	padding-bottom: 35px
+.form_title
+	color: white
+	font-family: $title-font
+	font-size: 25px
+	letter-spacing: 1.12px
+	text-align: center
+	padding-top: 22px
+.form_subtitle
+	color: white
+	font-size: 16px
+	letter-spacing: 0.72px
+	text-align: center
+	margin-top: 14px
+.form_consultation
+	margin-top: 30px
+.form-item
+	max-width: 230px
+	margin-right: 20px
+.form-input
+	font-size: 16px
+	background-color: transparent
+	margin-top: 5px
+	width: 100%
+	color: white
+	border-right: none
+	border-left: none
+	border-top: none
+	border-bottom: 1px solid white
+	padding-bottom: 8px
+	outline: none
 
+::-webkit-input-placeholder  /* WebKit browsers */
+   color:    white
 
+::-moz-placeholder  /* Mozilla Firefox 4 to 18 */
+   color:    white
+
+::-moz-placeholder  /* Mozilla Firefox 19+ */
+   color:    white
+
+.btn_consultation
+	max-width: 235px
+	padding: 8px 19px
+	font-family: MuseoSansCyrl500
+	cursor: pointer
+	font-size: 16px
+	letter-spacing: 0.72px
+	border: none
+	background-color: #fff
+.btn_consultation:hover
+	background-color: #182f5d
+	color: #fff
+	transition: 0.3s
+
+.agreement
+	font-size: 16px
+	font-family: MuseoSansCyrl300
+	color: #b4c3d5
+	text-align: center
+	margin-top: 25px
+
+.agreement a
+	text-decoration: none
+	color: #fff
+	letter-spacing: .04px
+	font-size: 16px
+	border-bottom: 1px solid white
+	&:hover
+		color: #182f5d
+		border-bottom: 1px solid #182f5d
+//About-company
+.about-company
+	background: url(../img/about.jpeg) no-repeat center top
+	background-size: cover
+	padding-bottom: 90px
+	padding-top: 65px
+.title-about
+	padding-bottom: 50px
+	margin: 0
+.about-my
+	max-width: 1050px
+	margin-bottom: 55px
+.my-photo
+	float: left
+	padding-right: 50px
+.text_about_header
+	font-size: 20px
+	font-family: MuseoSansCyrl500
+	text-align: center
+	letter-spacing: 0.92px
+.education
+	margin: 20px 50px
+.experience-item
+	margin-top: 20px
+.experience
+	&-item
+		max-width: 370px
+//View
+.view
+	padding-top: 65px
+	background: url(../img/lawyer.png) no-repeat left center, url(../img/film.png) no-repeat right center
+	&__title
+		margin-bottom: 40px
+	.left_block
+		border: 1px solid #d4d4d4
+		background: $white
+		padding: 25px
+		padding-right: 40px
+	.right_block
+		padding-left: 10px
+	.video
+		position: relative
+		padding-bottom: 56.25%
+		padding-top: 30px
+		height: 0
+		overflow: hidden
+		iframe
+			position: absolute
+			top: 0
+			left: 0
+			max-height: 415px
+			width: 100%
+			height: 100%
+.btn-youtube
+	background-color: #6fa4c7
+	color: #fff
+	min-width: 315px
+	display: inline-block
+	padding: 20px
+	text-align: center
+	font-family: MuseoSansCyrl300
+	font-size: 16px
+	line-height: 23px
+	letter-spacing: 0.64px
+	&:hover
+		text-decoration: none
+		background-color: #fff
+		color: #6fa4c7
+		border: 1px solid #6fa4c7
+		-webkit-transition: 0.2s
+		-o-transition: 0.2s
+		transition: 0.2s
+//Subscribe
+.subscribe
+	background: url(../img/subscribe.jpeg) no-repeat center top
+	background-size: cover
+	padding-top: 60px
+	padding-bottom: 75px
+	color: $white
+.email_subscribe
+	display: inline-block
+	max-width: 600px
+	margin-right: 20px
+	input
+		font-family: MuseoSansCyrl300
+		font-size: 16px
+		background-color: transparent
+		width: 100%
+		color: #fff
+		border-right: none
+		border-left: none
+		border-top: none
+		border-bottom: 1px solid white
+		padding-bottom: 8px
+		outline: none
+.form_subscribe
+	text-align: center
+	margin-top: 50px
+	display: flex
+	justify-content: center
+	align-items: flex-end
+.btn_subscribe
+	min-width: 230px
+	button
+		display: inline-block
+		font-family: MuseoSansCyrl500
+		font-size: 16px
+		letter-spacing: 0.72px
+		padding: 10px
+		width: 100%
+		max-width: 230px
+		border: none
+		background-color: #6fa4c7
+		color: #fff
+		&:hover
+			background-color: #182f5d
+			color: #fff
+			transition: 0.3s
+//Footer
+.footer
+	background: url(../img/footer.jpeg) no-repeat center top
+	background-size: cover
+	padding-top: 55px
+	padding-bottom: 65px
+	color: #828f9a
+	&-menu
+		list-style: none
+		padding: 0
+		margin: 0
+		&__item
+			margin-bottom: 8px
+			a
+				text-decoration: none
+				color: #828f9a
+				&:hover
+					color: $white
+	.contacts
+		text-align: right
+		p
+			display: inline-block
+		.address
+			margin-right: 60px
+		.number
+			color: #dddddd
+			font-family: MuseoSansCyrl500
+			font-size: 17px
+			line-height: 37px
+			letter-spacing: 2px
+	.social-icons
+		justify-content: flex-end
+		li:last-child
+			margin-right: 0
+		a
+			border: 3px solid #114970
 @import "media" // Always at the end

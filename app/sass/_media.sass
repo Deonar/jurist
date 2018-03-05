@@ -12,6 +12,29 @@
   //Img-list-block
   .img-list
     overflow: hidden
+  //View
+  .view
+    padding-bottom: 135px
+    .left_block
+      order: 2
+      padding: 25px
+    .right_block
+      padding: 0
+      order: 1
+    .video iframe
+      max-height: none
+    .btn-youtube
+      position: absolute
+      left: 50%
+      bottom: -30px
+      transform: translateX(-50%)
+  //Footer
+  .footer
+    .contacts
+      p
+        display: block
+      .address
+        margin-right: 0
 //Medium: ≥768px
 +media-breakpoint-down(md)
   .top-nav
@@ -78,12 +101,86 @@
   //Img-list-block
   .img-list
     margin-top: 0
+  //About-company
+  .my-photo
+    max-width: 350px
+    padding-right: 20px
+  .education
+    margin: 20px 0
+  //Footer
+  .footer
+    .footer-right-colum
+      padding-bottom: 50px
+    .contacts
+      text-align: left
+    .social-icons
+      justify-content: center
 //Small: ≥576px
 +media-breakpoint-down(sm)
+  //Form-contact
+  .form_subtitle
+    margin-bottom: 20px
+  .form_consultation
+    margin-top: 20px
+    margin: 0 auto
+    text-align: center
+    max-width: 400px
+  .form-item
+    width: 100%
+    max-width: none
+    margin: 0
+  .form-input
+    text-align: center
+  .container-btn_consultation
+    order: 12
+  .btn_consultation
+    width: 100%
+    max-width: none
+  .container-agreement
+    margin-bottom: 15px
+    order: 2
 
+  //About-company
+  .about-company
+    padding-top: 35px
+  .title-about
+    padding-bottom: 35px
+  .about-my
+    display: flex
+    flex-direction: column
+  .my-photo
+    order: 2
+    float: none
+    padding: 0
+    width: 100%
+    max-width: none
+  .text_about
+    order: 1
+  //Subscribe
+  .form_subscribe
+    flex-direction: column
+    align-items: stretch
+    .btn_subscribe
+      margin-top: 22px
+//Custom: >460
++media-breakpoint-down(custom)
+  //Footer
+  .footer
+    .footer-menu
+      margin: 35px
+    .footer-right-colum
+      display: block
+      text-align: center
+      padding-bottom: 0
+    .footer-left-colum
+      display: block
+      .contacts
+        max-width: none
+        text-align: center
+      .social-container
+        margin: auto
 //Extra small: >0
 +media-breakpoint-down(xs)
-
 
 /*==========  Mobile First  ==========*/
 

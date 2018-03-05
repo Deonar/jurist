@@ -17,8 +17,8 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false,
 		open: true,
-		// tunnel: true,
-		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
+		tunnel: true,
+		tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
 	})
 });
 
