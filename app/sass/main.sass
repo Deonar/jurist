@@ -143,8 +143,6 @@ body
 		font-family: MuseoSansCyrl500
 		letter-spacing: .1em
 		font-size: 19px
-.news-page .phone
-	color: black
 //Main
 .main
 	background: url(../img/first_screen.png) no-repeat center top
@@ -527,7 +525,7 @@ body
 			border: 3px solid #114970
 
 //News-page
-.news-page
+.general-page
 	.header
 		position: static
 		&::after
@@ -537,10 +535,17 @@ body
 			width: 100%
 			height: 91px
 			background: url("../img/img-line2.jpg") center no-repeat
+	.phone
+		color: black
 	.news
 		padding: 45px 0
 	.top-nav_menu li a
 		color: black
+		&:hover
+			color: $accent
+	.top-nav_menu .active
+		a
+			color: $accent
 	.top-nav .btn-menu
 		color: black
 	.news-tab ul
@@ -603,4 +608,24 @@ body
 			text-decoration: none
 			background-color: $accent
 			color: #fff
+
+//Contact
+.yandexMap
+	margin-top: 35px
+	margin-bottom: 70px
+	height: 500px
+.info
+	margin-top: 40px
+	.title
+		margin-bottom: 15px
+	.title_block
+		display: inline-block
+		border-bottom: solid 1px $accent
+		margin-bottom: 10px
+	&_block
+		max-width: 370px
+		margin: 15px auto
+		padding: 22px
+		border: 1px solid $accent
+
 @import "media" // Always at the end
