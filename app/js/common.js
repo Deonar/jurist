@@ -18,4 +18,27 @@ $(function() {
             $('.top-nav_menu').hide();
         }
     });
+    //Service-list
+    (function($) {
+        $(function() {
+            $("ul.service__tabs").on("click", "li:not(.active)", function() {
+                $(this)
+                    .addClass("active")
+                    .siblings()
+                    .removeClass("active")
+                    .closest("div.service-wrapper")
+                    .find("div.service__content")
+                    .removeClass("active")
+                    .eq($(this).index())
+                    .addClass("active");
+            });
+        });
+    })(jQuery);
+    //Readmore
+    $('.news-description').readmore({
+        collapsedHeight: 75,
+        moreLink: '<a class="readmore-js-toggle" href="#">Подробнее</a>',
+        lessLink: '<a class="readmore-js-toggle" href="#">Свернуть</a>'
+    });
+
 });

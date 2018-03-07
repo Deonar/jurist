@@ -12,6 +12,12 @@
   //Img-list-block
   .img-list
     overflow: hidden
+  //Service
+  .service
+    &__tabs
+      justify-content: space-around
+    .header_service
+      justify-content: center
   //View
   .view
     padding-bottom: 135px
@@ -37,11 +43,13 @@
         margin-right: 0
 //Medium: ≥768px
 +media-breakpoint-down(md)
+  .main-page
+    .top-nav
+      .logo_black
+        display: none
+      .logo_white
+        display: block
   .top-nav
-    .logo_black
-      display: none
-    .logo_white
-      display: block
     .top-nav_menu
       position: absolute
       display: none
@@ -162,8 +170,37 @@
     align-items: stretch
     .btn_subscribe
       margin-top: 22px
+  //News-page
+  .news-page
+    padding: 25px 0
+    .news-tab ul
+      justify-content: center
+      a
+        padding: 8px 15px
+    .news-item
+      margin-bottom: 35px
+  .news-img
+    img
+      padding: 10px 0
+      width: 100%
+
 //Custom: >460
 +media-breakpoint-down(custom)
+  //header
+  .header
+    .phone
+      font-size: 16px
+      padding-top: 47px
+      padding-right: 0
+      padding-left: 0
+    .logo
+      max-width: 80px
+    .btn-menu
+      margin-top: 44px
+  .main
+    .slogan
+      &_h2
+        font-size: 27px
   //Footer
   .footer
     .footer-menu
@@ -179,6 +216,15 @@
         text-align: center
       .social-container
         margin: auto
+  //Pagination
+  .pagination
+    .link
+      &-back
+        margin-right: 15px
+      &-next
+        margin-left: 15px
+    .pagination-btn
+      padding: 5px 15px
 //Extra small: >0
 +media-breakpoint-down(xs)
 
