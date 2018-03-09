@@ -46,4 +46,36 @@ $(function() {
             }
         }
     });
+    //Question page
+    $(document).ready(function() {
+        $('.answer-container').hide();
+        $('.question_wrapper > .question_item').click(function (event) {
+            $(this).toggleClass('question-active');
+            $(this).children(".answer-container").slideToggle();
+            event.stopPropagation();
+        });
+        $('.question_item').children('button').click(function (event) {
+                $(this).closest('.question_item').toggleClass('question-active');
+                $(this).closest(".answer-container").slideToggle();
+                event.stopPropagation();
+        });
+    });
+    //Slider
+    $(document).ready(function(){
+        $('.service-slide').slick({
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            prevArrow:'<button type="button" class="slick-prev"></button>',
+            nextArrow:'<button type="button" class="slick-next"></button>'
+        });
+    });
+    //Scroll
+    $(document).ready(function(){
+        $("#menu_footer").on("click","a", function (event) {
+            event.preventDefault();
+            var id  = $(this).attr('href'),
+                top = $(id).offset().top;
+            $('body,html').animate({scrollTop: top}, 1500);
+        });
+    });
 });

@@ -18,9 +18,14 @@
       justify-content: space-around
     .header_service
       justify-content: center
+  //SupportList
+  .supportList
+    &_item
+      p
+        width: 230px
   //View
   .view
-    padding-bottom: 135px
+    padding-bottom: 120px
     .left_block
       order: 2
       padding: 25px
@@ -41,6 +46,7 @@
         display: block
       .address
         margin-right: 0
+
 //Medium: ≥768px
 +media-breakpoint-down(md)
   .main-page
@@ -51,6 +57,7 @@
         display: block
   .top-nav
     .top-nav_menu
+      z-index: 999
       position: absolute
       display: none
       background: #fff
@@ -74,6 +81,11 @@
             &::after
               content: ''
               display: none
+      .active a
+        &::after
+          content: ''
+          display: none
+
     .phone
       padding-top: 55px
       font-size: 18px
@@ -109,6 +121,10 @@
   //Img-list-block
   .img-list
     margin-top: 0
+  //Service
+  .service
+    .header_service-hiden
+      display: none
   //About-company
   .my-photo
     max-width: 350px
@@ -123,8 +139,18 @@
       text-align: left
     .social-icons
       justify-content: center
+  .policy
+    text-align: center
 //Small: ≥576px
 +media-breakpoint-down(sm)
+  //Service
+  .service-wrapper
+    display: none
+  //SupportList
+  .supportList
+    &_item
+      p
+        font-size: 17px
   //Form-contact
   .form_subtitle
     margin-bottom: 20px
@@ -195,6 +221,7 @@
     .logo
       max-width: 80px
     .btn-menu
+      outline: 0
       margin-top: 44px
   .main
     .slogan
@@ -237,9 +264,14 @@
 
 //Medium: ≤768px
 +media-breakpoint-up(md)
-
+  //Service
+  .service-wrapper-mob
+    display: none
 //Large: ≤992px
 +media-breakpoint-up(lg)
 
 //Extra large: ≤1200px
 +media-breakpoint-up(xl)
+  .main
+    &:after
+      margin-left: -30px
